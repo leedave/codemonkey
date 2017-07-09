@@ -1,0 +1,47 @@
+{
+    "configs": {
+        
+    },
+    "projectname": "codemonkey",
+    "files": [
+        {
+            "name": "src/folder5/SimpleClass.php",
+            "templates": [
+                "randomclass.txt"
+            ],
+            "attributes": {
+                "classname": "{{$classname1}}",
+                "namespace": "{{$namespace1}}",
+                "input": "{{$input1}}"
+            }
+        },
+        {
+            "name": "src/AnotherClass.php",
+            "templates": [
+                "randomclass.txt"
+            ],
+            "attributes": {
+                "classname": "AnotherClass",
+                "input": "SomeOtherAttribute",
+                "namespace": "Leedch\\Codemonkey\\Demo"
+            }
+        }
+    ],
+    "attributes": [
+        {
+            "label": "Name of first Class",
+            "name": "classname1",
+            "default": "FirstClass"
+        },
+        {
+            "label": "Name of first Class attribute",
+            "name": "input1",
+            "default": "devilsAttribute"
+        },
+        {
+            "label": "Namespace for Class 1",
+            "name": "namespace1",
+            "default": "Leedch\\Codemonkey\\Demo2"
+        }
+    ]
+}

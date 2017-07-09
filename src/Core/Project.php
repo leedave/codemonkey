@@ -4,15 +4,16 @@ namespace Leedch\Codemonkey\Core;
 
 use Exception;
 use ZipArchive;
-use Leedch\Html\Core\Html5;
+use Leedch\Codemonkey\Core\Core;
 use Leedch\Codemonkey\Core\File;
+use Leedch\Html\Core\Html5;
 
 /**
  * This stands for a bundle of generated files
  *
  * @author leed
  */
-class Project {
+class Project extends Core {
     
     protected $config;
     
@@ -44,7 +45,7 @@ class Project {
     protected function createFile($arrFile) {
         $file = new File($arrFile['name']);
         foreach ($arrFile['templates'] as $template) {
-            $file->addTemplate(pathCodemonkeyTemplateDir.$template);
+            $file->addTemplate(codemonkey_pathTemplateDir.$template);
         }
         if (isset($arrFile['attributes'])) {
             $file->addAttributes($arrFile['attributes']);
@@ -153,7 +154,7 @@ class Project {
      */
     protected function clearTempFolder()
     {
-        $this->flushDir(pathCodemonkeyTempDir);
+        $this->flushDir(codemonkey_pathTempDir);
     }
     
     /**
@@ -195,7 +196,7 @@ class Project {
      * Creates a Zip file from the temp folder and returns it immediately (terminates script)
      */
     protected function returnZipFile() {
-        chdir(pathCodemonkeyTempDir);
+        chdir(codemonkey_pathTempDir);
         $zipname = $this->config['projectname'].".zip";
         $zip = new ZipArchive();
         $zip->open($zipname, ZipArchive::CREATE);
@@ -208,7 +209,7 @@ class Project {
         header('Content-Type: application/zip');
         header('Content-disposition: attachment; filename='.$zipname);
         header('Content-Length: ' . filesize($zipname));
-        readfile(pathCodemonkeyTempDir.$zipname);
+        readfile(codemonkey_pathTempDir.$zipname);
         unlink($zipname);
         $this->clearTempFolder();
         exit();

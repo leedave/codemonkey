@@ -3,6 +3,7 @@
 namespace Leedch\Codemonkey\Core;
 
 use Exception;
+use Leedch\Codemonkey\Core\Core;
 use Leedch\Codemonkey\Core\Folder;
 
 /**
@@ -11,7 +12,7 @@ use Leedch\Codemonkey\Core\Folder;
  *
  * @author leed
  */
-class File {
+class File extends Core{
     
     protected $filePath = "";
     protected $arrTemplates = [];
@@ -24,7 +25,11 @@ class File {
      * 
      * @param string $filePath The filename 
      */
-    public function __construct($filePath) {
+    public function __construct() {
+        parent::__construct();
+    }
+    
+    public function setFilePath($filePath) {
         $this->filePath = $filePath;
     }
     
@@ -94,7 +99,11 @@ class File {
      * Creates the file in the temp folder
      */
     public function generate() {
-        $tempDir = pathCodemonkeyTempDir;
+        if (!$this->filePath) {
+            throw new Exception('Trying to save file without path');
+        }
+        
+        $tempDir = codemonkey_pathTempDir;
         
         $content = $this->generateCode();
         
@@ -130,7 +139,7 @@ class File {
      * @return void
      */
     protected function checkIfTempFolderExists() {
-        $dir = pathCodemonkeyTempDir;
+        $dir = codemonkey_pathTempDir;
         if (file_exists($dir) && is_dir($dir)) {
             return;
         }

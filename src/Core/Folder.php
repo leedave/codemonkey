@@ -3,13 +3,14 @@
 namespace Leedch\Codemonkey\Core;
 
 use Exception;
+use Leedch\Codemonkey\Core\Core;
 
 /**
  * Class that manages folders
  *
  * @author leed
  */
-class Folder {
+class Folder extends Core{
     
     /**
      * Creates a full folder path
@@ -56,7 +57,7 @@ class Folder {
      * @return void
      */   
     protected function createSingleFolderIfNotExists($fullPath) {
-        $tempDir = pathCodemonkeyTempDir;
+        $tempDir = codemonkey_pathTempDir;
         if (file_exists($tempDir.$fullPath) && is_dir($tempDir.$fullPath)) {
             return;
         }
