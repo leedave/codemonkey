@@ -196,7 +196,7 @@ class Project extends Core {
     /**
      * Creates a Zip file from the temp folder and returns it immediately (terminates script)
      */
-    protected function returnZipFile() {
+    public function returnZipFile() {
         chdir(codemonkey_pathTempDir);
         $zipname = $this->config['projectname'].".zip";
         $zip = new ZipArchive();
