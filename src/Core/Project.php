@@ -43,7 +43,8 @@ class Project extends Core {
      * @param string $arrFile JSON string
      */
     protected function createFile($arrFile) {
-        $file = new File($arrFile['name']);
+        $file = new File();
+        $file->setFilePath($arrFile['name']);
         foreach ($arrFile['templates'] as $template) {
             $file->addTemplate(codemonkey_pathTemplateDir.$template);
         }
