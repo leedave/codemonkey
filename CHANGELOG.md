@@ -7,7 +7,7 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ## [0.0.1] - 2017-07-09
 
 ### Added
-- Initial Code
+- Made Project::clearTempFolder Public
 
 ### Deprecated
 - Nothing
@@ -20,3 +20,8 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ### Security
 - Nothing
+
+## [0.0.1] - 2017-07-09
+
+### Added
+- Initial Code

@@ -156,7 +156,7 @@ class Project extends Core {
     /**
      * Empty the temp folder
      */
-    protected function clearTempFolder()
+    public function clearTempFolder()
     {
         $this->flushDir(codemonkey_pathTempDir);
     }
