@@ -46,7 +46,10 @@ class Project extends Core {
         $file = new File();
         $file->setFilePath($arrFile['name']);
         foreach ($arrFile['templates'] as $template) {
-            $file->addTemplate(codemonkey_pathTemplateDir.$template);
+            if (substr($template, 0, 1) != "/") {
+                $template = codemonkey_pathTemplateDir.$template;
+            }
+            $file->addTemplate($template);
         }
         if (isset($arrFile['attributes'])) {
             $file->addAttributes($arrFile['attributes']);
