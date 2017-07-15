@@ -58,6 +58,48 @@ your code
 
 ```json
 {
+"attributes": [
+        {
+            "label": "Namespace for Class 1",
+            "name": "namespace1",
+            "default": "Leedch\\Codemonkey\\Demo2"
+        }
+    ]
+}
+
+```
+
+## All together
+
+At the end your file should look something like this
+
+```json
+{
+    "projectname": "MyProject",
+    "files": [
+    {
+        "name": "src/folder5/SimpleClass.php",
+        "templates": [
+            "randomclass.txt"
+        ],
+        "attributes": {
+            "classname": "myClassName",
+            "namespace": "\\Myvendor\\Myproject\\Myclass",
+            "input": "{{$input1}}"
+        }
+    },
+    {   
+        "name": "src/folder5/AnotherClass.php",
+        "templates": [
+            "randomclass.txt"
+        ],
+        "attributes": {
+            "classname": "myOtherClassName",
+            "namespace": "\\Myvendor\\Myproject\\Myclass",
+            "input": "{{$input1}}"
+        }
+    }
+    ],
     "attributes": [
         {
             "label": "Namespace for Class 1",
