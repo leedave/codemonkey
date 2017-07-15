@@ -168,6 +168,10 @@ class Project extends Core {
      */
     protected function flushDir($dir)
     {
+        if (!file_exists($dir)) {
+            echo "HELP cant find ".$dir."\n";
+            return;
+        }
         $objects = scandir($dir);
         foreach ($objects as $object) {
             try {
