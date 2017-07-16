@@ -8,7 +8,7 @@ templates
 ## What you need
 
 To generate code with this tool you'll need
-* A file defining Constants required (example in components `config` folder
+* A file defining Constants required (example in components `config` folder)
 * A JSON config file
 * At least one template file
 
