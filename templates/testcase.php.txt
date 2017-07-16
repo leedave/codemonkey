@@ -1,0 +1,9 @@
+<?php
+
+{{$namespace}}
+
+class {{$testClassName}} {
+{{$testClassAttributes}}
+{{$testClassMethods}}
+}
+

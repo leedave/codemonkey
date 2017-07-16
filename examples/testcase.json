@@ -1,0 +1,46 @@
+{
+    "projectname": "TestCase",
+    "files": [
+        {
+            "name": "tests/testcase.php",
+            "templates": [
+                "../vendor/leedch/codemonkey/templates/testcase.php.txt"
+            ],
+            "attributes": {
+                "testClassName": "testcase",
+                "namespace": "Testclasses\\Testcases",
+                "testClassAttributes": "protected $home = \"home\";\nprotected $isActive = true;\n",
+                "testClassMethods": "public function __construct() \n{\n}\n"
+            }
+        },
+        {
+            "name": "tests/testcase2.php",
+            "templates": [
+                "../vendor/leedch/codemonkey/templates/testcase.php.txt"
+            ],
+            "attributes": {
+                "testClassName": "testcase2",
+                "namespace": "Testclasses\\Testcases",
+                "testClassAttributes": "protected $home = \"home2\";\nprotected $isActive = false;\n",
+                "testClassMethods": "public function __construct() \n{\n}\n"
+            }
+        }
+    ],
+    "attributes": [
+        {
+            "label": "Name of first Class",
+            "name": "classname1",
+            "default": "FirstClass"
+        },
+        {
+            "label": "Name of first Class attribute",
+            "name": "input1",
+            "default": "devilsAttribute"
+        },
+        {
+            "label": "Namespace for Class 1",
+            "name": "namespace1",
+            "default": "Leedch\\Codemonkey\\Demo2"
+        }
+    ]
+}
