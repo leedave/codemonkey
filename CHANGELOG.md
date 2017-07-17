@@ -4,12 +4,10 @@ All Notable changes to `leech:codemonkey` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
-## [0.1.0] - 2017-07-16
+## [1.0.0] - 2017-07-17
 
 ### Added
-- Working Unit Tests
-- Examples for use in Unit Tests
-- Started Documentation
+- Decided to make a proper release
 
 ### Deprecated
 - Nothing
@@ -22,6 +20,14 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ### Security
 - Nothing
+
+
+## [0.1.0] - 2017-07-16
+
+### Added
+- Working Unit Tests
+- Examples for use in Unit Tests
+- Started Documentation
 
 
 ## [0.0.5] - 2017-07-11
