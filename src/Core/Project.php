@@ -6,7 +6,7 @@ use Exception;
 use ZipArchive;
 use Leedch\Codemonkey\Core\Core;
 use Leedch\Codemonkey\Core\File;
-use Leedch\Html\Core\Html5;
+use Leedch\Html\Html5 as H;
 
 /**
  * This stands for a bundle of generated files
@@ -132,8 +132,6 @@ class Project extends Core {
      * @return string HTML Page
      */
     protected function renderInputForm() {
-        $html = new Html5();
-        
         $arrTableBody = [];
         
         foreach ($this->config['attributes'] as $attribute) {
@@ -141,16 +139,16 @@ class Project extends Core {
             $fieldName = isset($attribute['name'])?$attribute['name']:"";
             $value = isset($attribute['default'])?$attribute['default']:"";
             $arrTableBody[] = [
-                $html->label($label, $fieldName),
-                $html->input($fieldName, "input", $value),
+                H::label($label, $fieldName),
+                H::input($fieldName, "input", $value),
             ];
         }
         
-        $content = $html->renderTable([], $arrTableBody)
-                 . $html->button("Generate Code");
-        $output = $html->form($_SERVER['REQUEST_URI'], $content);
+        $content = H::renderTable([], $arrTableBody)
+                 . H::button("Generate Code");
+        $output = H::form($_SERVER['REQUEST_URI'], $content);
         $headers = "";
-        return $html->htmlDocument("Codemonkey", $headers, $output);
+        return H::htmlDocument("Codemonkey", $headers, $output);
     }
     
     /**

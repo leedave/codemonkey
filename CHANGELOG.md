@@ -1,36 +1,40 @@
-# Changelog
+# Changelog #
 
 All Notable changes to `leech:codemonkey` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
-## [0.1.0] - 2017-07-16
+## [2.0.0] - 2017-12-30 ##
 
-### Added
+### Added ###
+- Updated to work with leedch/html version 2.0.0
+
+### Deprecated ###
+- Nothing
+
+### Fixed ###
+- Nothing
+
+### Removed ###
+- Nothing
+
+### Security ###
+- Nothing
+
+## [0.1.0] - 2017-07-16 ##
+
+### Added ###
 - Working Unit Tests
 - Examples for use in Unit Tests
 - Started Documentation
 
-### Deprecated
-- Nothing
+## [0.0.5] - 2017-07-11 ##
 
-### Fixed
-- Nothing
-
-### Removed
-- Nothing
-
-### Security
-- Nothing
-
-
-## [0.0.5] - 2017-07-11
-
-### Added
+### Added ###
 - Made Project::clearTempFolder Public
 
 
-## [0.0.1] - 2017-07-09
+## [0.0.1] - 2017-07-09 ##
 
-### Added
+### Added ###
 - Initial Code
