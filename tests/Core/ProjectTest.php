@@ -149,7 +149,7 @@ class ProjectTest extends TestCase {
         $file1 = 'tests/testcase.php';
         $file2 = 'tests/testcase2.php';
         $this->assertFileExists(codemonkey_pathTempDir . $file1);
-        $this->assertGreaterThan(0, filesize(codemonkey_pathTempDir . $file1));
+        $this->assertGreaterThan(0, filesize(codemonkey_pathTempDir . $file1), 'File '.codemonkey_pathTempDir.$file1.' not created');
         $this->assertFileExists(codemonkey_pathTempDir . $file2);
         $file1Content = file_get_contents(codemonkey_pathTempDir . $file1);
         $file1ExpectedContent = "<?php\n"
