@@ -4,10 +4,10 @@ All Notable changes to `leech:codemonkey` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
-## [2.0.0] - 2017-12-30 ##
+## [2.0.1] - 2017-12-30 ##
 
 ### Added ###
-- Updated to work with leedch/html version 2.0.0
+- Option to add CSS Files 
 
 ### Deprecated ###
 - Nothing
@@ -20,6 +20,11 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ### Security ###
 - Nothing
+
+## [2.0.0] - 2017-12-30 ##
+
+### Added ###
+- Updated to work with leedch/html version 2.0.0
 
 ## [1.0.0] - 2017-07-17
 

@@ -148,6 +148,11 @@ class Project extends Core {
                  . H::button("Generate Code");
         $output = H::form($_SERVER['REQUEST_URI'], $content);
         $headers = "";
+        if (defined('css_headers')) {
+            foreach(css_headers as $css) {
+                $headers .= H::link("", ["href" => $css, "rel" => "stylesheet"]);
+            }
+        }
         return H::htmlDocument("Codemonkey", $headers, $output);
     }
     
